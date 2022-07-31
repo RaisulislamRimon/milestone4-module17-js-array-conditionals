@@ -7,3 +7,11 @@ var friends = ["John", "Peter", "Mary", "Bob"];
 console.log(friends); // [ 'John', 'Peter', 'Mary', 'Bob' ]
 friends.push("Mike");
 console.log(friends); // [ 'John', 'Peter', 'Mary', 'Bob', 'Mike' ]
+
+// use pop to get last element
+// friends.pop();
+console.log(friends.pop()); // Mike
+console.log(friends); // [ 'John', 'Peter', 'Mary', 'Bob' ]
+
+var element = friends.pop();
+console.log(element); // Bob
