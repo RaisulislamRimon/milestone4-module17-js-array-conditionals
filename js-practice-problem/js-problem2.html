@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-problem2-solution</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark text-light">
+    <!-- javascript problem solving no : 2 with / in html files with bootstrap and
+    javascript if else statement -->
+    <div class="container text-center pt-5">
+      <div>
+        <h1 class="p-3">JS-problem2-solution</h1>
+        <h2 class="pt-3 pb-5">Check your result online</h2>
+        <button class="btn btn-primary" onclick="resultCheck()">
+          Click to test your result
+        </button>
+      </div>
+      <div class="p-5">
+        <h3 class="resultShow"></h3>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Write a program to find your and your friends’ grades using if-else.
+      /* 
+      var myResult = 85;
+      var tomResult = 66;
+      var JaneResult = 95;
+      var peterResult = 56;
+      var johnResult = 40; 
+      */
+
+      function resultCheck() {
+        var result = prompt("Enter your result : ");
+        //   console.log(result);
+
+        // this program is to find my grades only using if-else
+        if (result >= 80 && result <= 100) {
+          // document.write("<h1>You are passed</h1>");
+          // document.getElementsByClassName('resultShow').innerHTML = // why this is not working ?
+          document.querySelector(".resultShow").innerHTML = // but this works fine
+            "Result Grade is : A";
+          console.log("Result Grade is : A");
+          alert("Result Grade is : A");
+        } else if (result >= 60 && result <= 79) {
+          document.querySelector(".resultShow").innerHTML = // but this works fine
+            "Result Grade is : B";
+          console.log("Result Grade is : B");
+          //   alert("Result Grade is : B");
+        } else if (result >= 50 && result <= 59) {
+          document.querySelector(".resultShow").innerHTML = // but this works fine
+            "Result Grade is : C";
+          console.log("Result Grade is : C");
+          //   alert("Result Grade is : C");
+        } else if (result >= 40 && result <= 49) {
+          document.querySelector(".resultShow").innerHTML = // but this works fine
+            "Result Grade is : D";
+          console.log("Result Grade is : D");
+          //   alert("Result Grade is : D");
+        } else if (result >= 0 && result <= 39) {
+          document.querySelector(".resultShow").innerHTML = // but this works fine
+            "Result Grade is : F";
+          console.log("Result Grade is : F");
+          //   alert("Result Grade is : F");
+        } else {
+          document.querySelector(".resultShow").innerHTML =
+            "<h2>Invalid Result</h2>"; // but this works fine
+          console.log("Invalid Result");
+          //   alert("Invalid Result");
+        }
+      }
+    </script>
+  </body>
+</html>
